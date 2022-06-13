@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Bullet_Regular : Bullet
+{
+    private Rigidbody2D _rigidbody2D;
+
+    public override SO_BulletData BulletData 
+    { 
+        get => base.BulletData;
+        set
+        {
+            base.BulletData = value;
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _rigidbody2D.drag = BulletData.Friction;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_rigidbody2D != null && BulletData != null)
+        {
+            _rigidbody2D.MovePosition(transform.position + BulletData.BulletSpeed * transform.right * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var hittable = collision.GetComponent<IHittable>();
+        hittable?.GetHit(BulletData.Damage, gameObject);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            HitObstacle();
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            HitEnemy();
+        }
+        Destroy(gameObject);
+    }
+
+    private void HitEnemy()
+    {
+        Debug.Log("Hitting Enemey");
+    }
+
+    private void HitObstacle()
+    {
+        Debug.Log("Hitting obstacle");
+    }
+}
