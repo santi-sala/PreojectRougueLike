@@ -20,7 +20,9 @@ MonoBehaviour:
   <Bounce>k__BackingField: 0
   <GoThroughHittable>k__BackingField: 0
   <IsRaycast>k__BackingField: 0
-  <ImpactObstaclePrefab>k__BackingField: {fileID: 0}
-  <ImpactEnemyPrefab>k__BackingField: {fileID: 0}
+  <ImpactObstaclePrefab>k__BackingField: {fileID: 1805948703675961984, guid: bffe4ad9e0e780a4795222c4b5eaf389,
+    type: 3}
+  <ImpactEnemyPrefab>k__BackingField: {fileID: 4821008412283257101, guid: 2a064f026941ed94e8e5555a0c7ae491,
+    type: 3}
   <KnockBackPower>k__BackingField: 6
   <KnockBackDelay>k__BackingField: 0.1

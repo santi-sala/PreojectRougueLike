@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1805948703675961984, guid: bffe4ad9e0e780a4795222c4b5eaf389,
         type: 3}
       propertyPath: m_Name
-      value: Impact_EnemyPrefab
+      value: Impact_EnemyPrefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1805948703675962012, guid: bffe4ad9e0e780a4795222c4b5eaf389,
         type: 3}
@@ -84,6 +84,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 613212803003f6344bdcfa72cc0d3f19,
         type: 2}
+    - target: {fileID: 1805948703675962015, guid: bffe4ad9e0e780a4795222c4b5eaf389,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.050418302
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805948703675962015, guid: bffe4ad9e0e780a4795222c4b5eaf389,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.73810786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805948703675962015, guid: bffe4ad9e0e780a4795222c4b5eaf389,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8643588839707801461, guid: bffe4ad9e0e780a4795222c4b5eaf389, type: 3}
     m_AddedGameObjects: []
