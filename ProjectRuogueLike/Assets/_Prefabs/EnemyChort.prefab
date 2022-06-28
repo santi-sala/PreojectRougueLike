@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800792597186603931}
   - component: {fileID: 8933220427499506462}
+  - component: {fileID: 5025327242024753540}
   - component: {fileID: 7299198851429143727}
   m_Layer: 10
   m_Name: FeedbackHit
@@ -124,6 +125,21 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 3104815390618363461}
   _flashTime: 0.1
   _flashMaterial: {fileID: 2100000, guid: e2aaa167fe0a4aa4fa22af928dbebe7f, type: 2}
+--- !u!114 &5025327242024753540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749261873212367931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5754ff7a9508e43b11ba56cd3b69aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _freezeTimeDelay: 0.01
+  _unfreezeTimeDelay: 0
+  _timeFreezeValue: 0.2
 --- !u!114 &7299198851429143727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _feedbackToPlay:
   - {fileID: 8933220427499506462}
+  - {fileID: 5025327242024753540}
 --- !u!1 &3104815389340643222
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +320,7 @@ Transform:
   - {fileID: 800792597186603931}
   - {fileID: 1517504637}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3104815389682460162
 Rigidbody2D:
@@ -1152,7 +1169,7 @@ MonoBehaviour:
   - {x: -0.13216782, y: -0.4933033, z: 0}
   m_ShapePathHash: -2115315419
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1300
+  m_InstanceId: 33362
 --- !u!1 &3104815390717485182
 GameObject:
   m_ObjectHideFlags: 0
