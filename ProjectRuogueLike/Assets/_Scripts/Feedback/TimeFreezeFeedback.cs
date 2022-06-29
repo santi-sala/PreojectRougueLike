@@ -12,7 +12,10 @@ public class TimeFreezeFeedback : Feedback
 
     public override void CompletePreviousFeedBack()
     {
-        TimeController.instance.ResetTimeScale();
+        if (TimeController.instance != null)
+        {
+            TimeController.instance.ResetTimeScale();
+        }
     }
 
     public override void CreateFeedBack()
