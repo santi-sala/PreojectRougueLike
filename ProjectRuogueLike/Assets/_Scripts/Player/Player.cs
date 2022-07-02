@@ -27,15 +27,11 @@ public class Player : MonoBehaviour, IAgent, IHittable
             {
                 OnDie?.Invoke();
                 _dead = true;
-                StartCoroutine(DeathCoroutine());
+                
             }
         }
         
     }
 
-    IEnumerator DeathCoroutine()
-    {
-        yield return new WaitForSeconds(0.25f);
-        Destroy(gameObject);
-    }
+    
 }

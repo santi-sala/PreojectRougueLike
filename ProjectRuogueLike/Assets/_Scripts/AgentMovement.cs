@@ -57,5 +57,10 @@ public class AgentMovement : MonoBehaviour
         return Math.Clamp(currentVelocity, 0, MovementData.maxSpeed);
     }
 
+    public void StopImmediately()
+    {
+        _currentVelocity = 0;
+        _rigidbody2D.velocity = Vector2.zero;
+    }
     
 }
