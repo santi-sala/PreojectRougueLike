@@ -16,6 +16,8 @@ public class AgentMovement : MonoBehaviour
     private float _currentVelocity;
     private Vector2 _movementDirection;
 
+    private bool _isKnockedBack = false;
+
     [field: SerializeField]
     public UnityEvent<float> OnVelocityChange { get; set; }
 
@@ -27,7 +29,10 @@ public class AgentMovement : MonoBehaviour
     private void FixedUpdate()
     {
         OnVelocityChange?.Invoke(_currentVelocity);
-        _rigidbody2D.velocity = _currentVelocity * _movementDirection.normalized;
+        if (_isKnockedBack == false)
+        {
+            _rigidbody2D.velocity = _currentVelocity * _movementDirection.normalized;
+        }
     }
 
     public void MoveAgent(Vector2 movementInput)
@@ -62,5 +67,34 @@ public class AgentMovement : MonoBehaviour
         _currentVelocity = 0;
         _rigidbody2D.velocity = Vector2.zero;
     }
-    
+
+    public void KnokedBack(Vector2 direction, float power, float duration)
+    {
+        if (_isKnockedBack == false)
+        {
+            _isKnockedBack = true;
+            StartCoroutine(KnockeBackCoroutine(direction, power, duration));
+        }
+    }
+
+    public void ResetKnockedBack()
+    {
+        StopAllCoroutines();
+        StopCoroutine("KnockeBackCoroutine");
+        ResetKnockedBackParameters();
+    }
+
+    IEnumerator KnockeBackCoroutine(Vector2 direction, float power, float duration)
+    {
+        _rigidbody2D.AddForce(direction.normalized * power, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(duration);
+        ResetKnockedBackParameters();
+    }
+
+    private void ResetKnockedBackParameters()
+    {
+        _currentVelocity = 0;
+        _rigidbody2D.velocity = Vector2.zero;
+        _isKnockedBack = false;
+    }
 }
