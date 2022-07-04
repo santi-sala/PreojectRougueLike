@@ -11,15 +11,16 @@ public class Weapon : MonoBehaviour
     private GameObject _muzzle;
 
     [SerializeField]
-    private int ammo = 10;
+    private int _ammo = 10;
     [SerializeField]
     private SO_WeaponData _weaponData;
 
     public int Ammo
     {
-        get { return ammo; }
+        get { return _ammo; }
         set { 
-            ammo = Mathf.Clamp(value, 0, _weaponData.AmmoCapacity); 
+            _ammo = Mathf.Clamp(value, 0, _weaponData.AmmoCapacity);
+            OnAmmoChange?.Invoke(_ammo);
         }
     }
     public bool AmmoFull { get => Ammo >= _weaponData.AmmoCapacity; }
@@ -34,6 +35,9 @@ public class Weapon : MonoBehaviour
 
     [field: SerializeField]
     public UnityEvent OnShootNoAmmo { get; set; }
+
+    [field: SerializeField]
+    public UnityEvent<int> OnAmmoChange { get; set; }
 
     private void Start()
     {
