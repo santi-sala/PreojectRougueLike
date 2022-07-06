@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5754ff7a9508e43b11ba56cd3b69aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _freezeTimeDelay: 0.01
-  _unfreezeTimeDelay: 0
-  _timeFreezeValue: 0.2
+  _freezeTimeDelay: 0.001
+  _unfreezeTimeDelay: 0.02
+  _timeFreezeValue: 0.1
 --- !u!114 &7299198851429143727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484e06ae3b6f12f44996f5f7c4cc5acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Distance>k__BackingField: 5
+  <Distance>k__BackingField: 13
 --- !u!1 &3104815389682460173
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3104815389682460173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.62, y: 7.981, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000dbb05b9229c713006774fcb2
   m_ShapePath:
-  - {x: -0.2975273, y: -0.49582243, z: 0}
+  - {x: -0.25509405, y: -0.44047475, z: 0}
   - {x: -0.2560501, y: -0.26484823, z: 0}
   - {x: -0.18981361, y: -0.1954217, z: 0}
   - {x: -0.17932463, y: -0.13084078, z: 0}
@@ -1161,15 +1161,16 @@ MonoBehaviour:
   - {x: 0.24567461, y: -0.059256554, z: 0}
   - {x: 0.18203163, y: -0.121044636, z: 0}
   - {x: 0.18501234, y: -0.1775546, z: 0}
-  - {x: 0.30780172, y: -0.3038373, z: 0}
-  - {x: 0.30715084, y: -0.49330282, z: 0}
-  - {x: 0.13216782, y: -0.49702597, z: 0}
-  - {x: 0.12844515, y: -0.43745756, z: 0}
-  - {x: -0.117275715, y: -0.43373442, z: 0}
-  - {x: -0.13216782, y: -0.4933033, z: 0}
-  m_ShapePathHash: -2115315419
+  - {x: 0.30226707, y: -0.31121683, z: 0}
+  - {x: 0.24920225, y: -0.31433916, z: 0}
+  - {x: 0.25439405, y: -0.43932462, z: 0}
+  - {x: 0.12551403, y: -0.43713975, z: 0}
+  - {x: 0.11735487, y: -0.3753531, z: 0}
+  - {x: -0.12171173, y: -0.37606597, z: 0}
+  - {x: -0.12847805, y: -0.44164562, z: 0}
+  m_ShapePathHash: 1485581743
   m_Mesh: {fileID: 0}
-  m_InstanceId: 33362
+  m_InstanceId: 37546
 --- !u!1 &3104815390717485182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,4 +1405,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484e06ae3b6f12f44996f5f7c4cc5acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Distance>k__BackingField: 5
+  <Distance>k__BackingField: 13
