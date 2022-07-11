@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 3104815389626912671}
   - component: {fileID: 3104815389626912664}
   - component: {fileID: 3104815389626912670}
+  - component: {fileID: 35673362}
   m_Layer: 10
   m_Name: TransitionChase
   m_TagString: Untagged
@@ -264,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Decisions>k__BackingField:
   - {fileID: 3104815389626912670}
+  - {fileID: 35673362}
   <PositiveResult>k__BackingField: {fileID: 3104815390889720475}
   <NegativeResult>k__BackingField: {fileID: 0}
 --- !u!114 &3104815389626912670
@@ -279,6 +281,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Distance>k__BackingField: 13
+--- !u!114 &35673362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104815389626912665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb204b75598f48419f0120a532738f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 12
+  _raycastMask:
+    serializedVersion: 2
+    m_Bits: 2560
+  <OnplayerSpotted>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3104815390242167847}
+        m_TargetAssemblyTypeName: AgentSounds, Assembly-CSharp
+        m_MethodName: PlayVoiceSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3104815389682460173
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +691,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
-  m_Pitch: 1
+  m_Pitch: 0.4
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -756,7 +789,7 @@ MonoBehaviour:
   _pitchRandomness: 0.01
   _hitClip: {fileID: 8300000, guid: 739174ccbca42d34c88579866c1e36aa, type: 3}
   _deathClip: {fileID: 8300000, guid: 918d5cae1ca984a47abfda660d6ef771, type: 3}
-  _voiceLineClip: {fileID: 8300000, guid: 7e425c8c1ba7f3a49afb051e87677bf3, type: 3}
+  _voiceLineClip: {fileID: 8300000, guid: 0fec2a9f2b344184bb9c1de83590a287, type: 3}
 --- !u!1 &3104815390273916351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1173,7 @@ MonoBehaviour:
   m_ShadowGroup: 0
   m_ComponentVersion: 1
   m_HasRenderer: 1
-  m_UseRendererSilhouette: 0
+  m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000dbb05b9229c713006774fcb2
@@ -1170,7 +1203,7 @@ MonoBehaviour:
   - {x: -0.12847805, y: -0.44164562, z: 0}
   m_ShapePathHash: 1485581743
   m_Mesh: {fileID: 0}
-  m_InstanceId: 37546
+  m_InstanceId: 38074
 --- !u!1 &3104815390717485182
 GameObject:
   m_ObjectHideFlags: 0
